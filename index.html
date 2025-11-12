@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoSense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎧 Consound</h1>
+        <p>Upload or record the sound for AI to analyze their strength.</p>
+        
+        <div class="upload-box">
+            <input type="file" id="audioFile" name="audioFile" accept="audio/*">
+            <button id="uploadBtn">Upload & Analyze</button>
+        </div>
+        
+        <div class="record-box">
+            <button id="recordBtn">🎙️ Start Record</button>
+            <audio id="audioPreview" controls style="display:none;"></audio>
+            <button id="analyzeRecordBtn" style="display:none;">Analyze Recorded Audio</button>
+        </div>
+
+        <div id="result" class="result-box"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
