@@ -18,7 +18,7 @@ uploadBtn.addEventListener('click', async () => {
 recordBtn.addEventListener('click', async () => {
     if (mediaRecorder && mediaRecorder.state === "recording") {
         mediaRecorder.stop();
-        recordBtn.textContent = "🎙️ Start Recording";
+        recordBtn.textContent = "Start Recording";
         return;
     }
 
@@ -39,7 +39,7 @@ recordBtn.addEventListener('click', async () => {
     };
 
     mediaRecorder.start();
-    recordBtn.textContent = "⏹️ Stop Recording";
+    recordBtn.textContent = "Stop Recording";
 });
 
 analyzeRecordBtn.addEventListener('click', async () => {
@@ -49,7 +49,7 @@ analyzeRecordBtn.addEventListener('click', async () => {
 
 async function analyzeAudio(audioFile) {
     resultBox.style.display = "block";
-    resultBox.innerHTML = "🔄 Uploading and Analyzing.... ";
+    resultBox.innerHTML = "Uploading and Analyzing.... ";
 
     const formData = new FormData();
     formData.append('audio', audioFile);
@@ -61,10 +61,11 @@ async function analyzeAudio(audioFile) {
         });
         const data = await response.json();
 
-        resultBox.innerHTML = `✅ Result: ${data.result}<br>
-                               📊 Accuracy: ${(data.confidence * 100).toFixed(2)}%`;
+        resultBox.innerHTML = `Result: ${data.result}<br>
+                               Accuracy: ${(data.confidence * 100).toFixed(2)}%`;
     } catch (err) {
         console.error(err);
-        resultBox.innerHTML = "❌ Error ";
+        resultBox.innerHTML = "Error ";
     }
 }
+
