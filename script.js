@@ -73,10 +73,11 @@ async function analyzeAudio(audioFile) {
       body: formData
     });
     const data = await response.json();
-    resultBox.innerHTML = `✅ Result: ${data.result}<br>
-                           📊 Accuracy: ${(data.confidence * 100).toFixed(2)}%`;
+    resultBox.innerHTML = `Result: ${data.result}<br>
+                           Accuracy: ${(data.confidence * 100).toFixed(2)}%`;
   } catch (err) {
     console.error(err);
     resultBox.innerHTML = "❌ Error";
   }
 }
+
