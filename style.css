@@ -14,7 +14,7 @@ body {
   transition: transform 1s ease;
 }
 
-/* --- หน้าแรก --- */
+/*1*/
 .home-page {
   background: linear-gradient(225deg, #1f1c2c, #78218c);
   color: white;
@@ -55,7 +55,7 @@ body {
   color: #222;
 }
 
-/* --- หน้าที่สอง --- */
+/*2*/
 .app-page {
   background: linear-gradient(135deg, #1f1c2c, #78218c);
   color: #fff;
