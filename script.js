@@ -77,7 +77,8 @@ async function analyzeAudio(audioFile) {
                            Accuracy: ${(data.confidence * 100).toFixed(2)}%`;
   } catch (err) {
     console.error(err);
-    resultBox.innerHTML = "❌ Error";
+    resultBox.innerHTML = "Error";
   }
 }
+
 
